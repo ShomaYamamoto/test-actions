@@ -13,5 +13,5 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const pr = context.payload.pull_request
-            echo pr.branches_url
+            return pr.branches_url
             
