@@ -12,5 +12,5 @@ jobs:
       with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const pr = context.payload.pull_request
-            console.log(pr.head.ref)
+            const pr = await github.pulls.list("ShomaYamamoto","test-actions")
+            console.log(pr)
